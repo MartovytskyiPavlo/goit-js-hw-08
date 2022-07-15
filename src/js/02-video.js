@@ -1,11 +1,26 @@
 const iframe = document.querySelector('#vimeo-player');
 
-const player = new Vimeo.Player(iframe);
+const options = {
+    id: 236203659,
+    width: 640,
+    height:360,
+    frameborder:0,
+    allowfullscreen,
+    allow:"autoplay; encrypted-media",
+    loop: true
+    };
+
+const player = new Vimeo.Player(iframe,options);
 
 player.on('play', function() {
         console.log('played the video!');
 });
 
-player.getVideoTitle().then(function(title) {
-    console.log('title:', title);
+
+const seconds=player.getCurrentTime().then(function(seconds) {
+    // seconds = the current playback position
+}).catch(function(error) {
+    // an error occurred
 });
+
+localStorage.setItem("play", seconds);
