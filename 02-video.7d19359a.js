@@ -1,2 +1,0 @@
-const e=document.querySelector("#vimeo-player"),o={id:236203659,width:640,height:360,frameborder:0,allowfullscreen:allowfullscreen,allow:"autoplay; encrypted-media",loop:!0},l=new Vimeo.Player(e,o);l.on("play",(function(){console.log("played the video!")}));const t=l.getCurrentTime().then((function(e){})).catch((function(e){}));localStorage.setItem("play",t);
-//# sourceMappingURL=02-video.7d19359a.js.map

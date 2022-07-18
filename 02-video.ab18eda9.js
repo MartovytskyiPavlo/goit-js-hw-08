@@ -1,2 +1,0 @@
-!function(){var e=document.querySelector("#vimeo-player"),l={id:236203659,width:640,height:360,frameborder:0,allowfullscreen:allowfullscreen,allow:"autoplay; encrypted-media",loop:!0},o=new Vimeo.Player(e,l);o.on("play",(function(){console.log("played the video!")}));var t=o.getCurrentTime().then((function(e){})).catch((function(e){}));localStorage.setItem("play",t)}();
-//# sourceMappingURL=02-video.ab18eda9.js.map
