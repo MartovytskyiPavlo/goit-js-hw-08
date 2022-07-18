@@ -1,3 +1,5 @@
+import Player from '@vimeo/player';
+
 const iframe = document.querySelector('#vimeo-player');
 
 const options = {
@@ -10,7 +12,7 @@ const options = {
     loop: true
     };
 
-const player = new Vimeo.Player(iframe,options);
+const player = new Player(iframe,options);
 
 player.on('play', function() {
         console.log('played the video!');
