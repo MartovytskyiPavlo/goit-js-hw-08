@@ -9,12 +9,12 @@ player.on('play', function() {
 });
 
 
-// const seconds=player.getCurrentTime().then(function(seconds) {
-//     // seconds = the current playback position
-// }).catch(function(error) {
-//     // an error occurred
-// });
+const seconds=player.getCurrentTime().then(function(seconds) {
+    // seconds = the current playback position
+}).catch(function(error) {
+    // an error occurred
+});
 
-// console.log(seconds);
+console.log(seconds);
 
-localStorage.setItem("play", "12");
+localStorage.setItem("play", JSON.stringify(seconds));
