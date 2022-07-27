@@ -23,5 +23,7 @@ function onReloadPage() {
 
     if (timeline) {
         console.log('Time loaded!');
+    } else { 
+        console.log('First visit.');
     }
 }
