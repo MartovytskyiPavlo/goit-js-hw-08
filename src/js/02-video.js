@@ -2,6 +2,9 @@ import Player from '@vimeo/player';
 
 const iframe = document.querySelector('#vimeo-player');
 
+console.log(iframe);
+
+
 const player = new Vimeo.Player(iframe);
 
 player.on('play', function() {
