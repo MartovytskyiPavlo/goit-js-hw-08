@@ -25,4 +25,6 @@ const seconds=player.getCurrentTime().then(function(seconds) {
     // an error occurred
 });
 
+console.log(seconds);
+
 localStorage.setItem("play", seconds);
