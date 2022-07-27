@@ -17,4 +17,4 @@ player.on('play', function() {
 
 // console.log(seconds);
 
-localStorage.setItem("play", 12);
+localStorage.setItem("play", "12");
