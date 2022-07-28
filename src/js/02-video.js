@@ -12,8 +12,6 @@ const onTimeupdate = function (data) {
 
 player.on('timeupdate', onTimeupdate);
 
-localStorage.setItem("play", JSON.stringify(seconds));
-
 function onReloadPage() {
     const timeline = localStorage.getItem("timeline");
 
