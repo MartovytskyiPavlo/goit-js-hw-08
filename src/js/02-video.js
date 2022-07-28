@@ -3,9 +3,11 @@ import Player from '@vimeo/player';
 const iframe = document.querySelector('#vimeo-player');
 console.log(iframe);
 
+const player = new Player(iframe);
+
+
 onReloadPage();
 
-const player = new Player(iframe);
 
 const onTimeupdate = function (data) {
     localStorage.setItem("timeline",JSON.stringify(data.seconds));
