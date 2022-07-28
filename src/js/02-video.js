@@ -17,6 +17,7 @@ function onTimeupdate(data) {
     localStorage.setItem(TIME_KEY, JSON.stringify(data.seconds));
 };
 
+
 function onReloadPage() {
     const timeline = localStorage.getItem(TIME_KEY);
 
