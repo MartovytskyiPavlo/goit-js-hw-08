@@ -1,4 +1,5 @@
 import Player from '@vimeo/player';
+import throttle from 'lodash.throttle';
 
 const TIMELINE = 'videoplayer-current-time';
 
@@ -10,12 +11,12 @@ const player = new Player(iframe);
 
 onReloadPage();
 
+player.on('timeupdate', throttle(onTimeupdate,1000));
+
 
 const onTimeupdate = function (data) {
     localStorage.setItem(TIMELINE, JSON.stringify(data.seconds));
 };
-
-player.on('timeupdate', onTimeupdate);
 
 function onReloadPage() {
     const timeline = localStorage.getItem(TIMELINE);
