@@ -17,8 +17,6 @@ function onReloadPage() {
     const timeline = localStorage.getItem("timeline");
 
     if (timeline) {
-        console.log('Time loaded!');
-    } else { 
-        console.log('First visit.');
+        player.setCurrentTime(JSON.parse(timeline));
     }
 }
