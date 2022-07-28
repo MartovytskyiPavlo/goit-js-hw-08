@@ -1,7 +1,7 @@
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
 
-const TIMELINE = 'videoplayer-current-time';
+const TIME_KEY = "videoplayer-current-time";
 
 const iframe = document.querySelector('#vimeo-player');
 
@@ -13,12 +13,12 @@ onReloadPage();
 player.on('timeupdate', throttle(onTimeupdate,1000));
 
 
-const onTimeupdate = function (data) {
-    localStorage.setItem(TIMELINE, JSON.stringify(data.seconds));
+function onTimeupdate(data) {
+    localStorage.setItem(TIME_KEY, JSON.stringify(data.seconds));
 };
 
 function onReloadPage() {
-    const timeline = localStorage.getItem(TIMELINE);
+    const timeline = localStorage.getItem(TIME_KEY);
 
     if (timeline) {
         player.setCurrentTime(JSON.parse(timeline)).then(function(seconds) {
