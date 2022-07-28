@@ -5,7 +5,7 @@ console.log(iframe);
 
 onReloadPage();
 
-const player = new Vimeo.Player(iframe);
+const player = new Player(iframe);
 
 const onTimeupdate = function (data) {
     localStorage.setItem("timeline",JSON.stringify(data.seconds));
