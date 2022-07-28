@@ -21,16 +21,6 @@ function onReloadPage() {
     const timeline = localStorage.getItem(TIME_KEY);
 
     if (timeline) {
-        player.setCurrentTime(JSON.parse(timeline)).then(function(seconds) {
-            }).catch(function(error) {
-            switch (error.name) {
-                case 'RangeError':
-                    // the time was less than 0 or greater than the video’s duration
-                    break;
-                default:
-                    // some other error occurred
-                    break;
-            }
-        });
+        player.setCurrentTime(JSON.parse(timeline));
     }
 }
