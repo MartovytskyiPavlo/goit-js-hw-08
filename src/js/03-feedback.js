@@ -25,6 +25,7 @@ function onReloadPage() {
 
         for (const name in obj) {
             form[name].value = obj[name];
+            storageObject[name]= obj[name];
         }
     }
 }
